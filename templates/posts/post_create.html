@@ -1,0 +1,7 @@
+<h1> Welcome to post {{form_type}} </h1>
+ 
+<form method='POST' action=".">
+  {% csrf_token %}
+  {{ form.as_p}}
+  <button type="submit">{{form_type}} post</button>
+  </form>

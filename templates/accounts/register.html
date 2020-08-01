@@ -1,0 +1,16 @@
+<h1> Register peeps</h1>
+<form action="" method="POST">
+   {% csrf_token %}
+   <input type="text" name="first_name" placeholder="first name"><br>
+   <input type="text" name="last_name" placeholder="last name"><br>
+   <input type="text" name="username" placeholder="Username"><br>
+   <input type="email" name="email" placeholder="email"><br>
+   <input type="text" name="password" placeholder="password"><br>
+   <input type="text" name="password1" placeholder="confirm password"><br>
+   <button type='submit'  value="Submit">Submit</button>
+   </form>
+<div>
+{%for message in messages%}
+<h3>{{message}}</h3>
+{% endfor %}
+</div>

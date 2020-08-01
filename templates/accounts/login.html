@@ -1,0 +1,21 @@
+<h1> Login peeps</h1>
+<form action="" method="POST">
+   {% csrf_token %}
+<input type='text' name='username' placeholder='username'></br>
+<input type='text' name='password' placeholder='password'></br>
+<div class='form-group'><button type='submit'  value="Submit">Submit</button>
+ <small class="text-muted ml-2">
+                    <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                </small>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+            </small>
+        </div>
+
+{%for message in messages%}
+<h3>{{message}}</h3>
+{% endfor %}
+</div>
